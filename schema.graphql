@@ -1,0 +1,41 @@
+enum EventType {
+    Start,
+    End
+}
+
+type NRecord {
+    id: ID!,
+    time: Int!,
+    event: EventType!
+}
+
+type SheetInfo {
+    records: [NRecord],
+    summary: Sheet,
+    total: Int!,
+    hasEnded: Boolean!
+}
+
+type Sheet {
+    id: ID!,
+    name: String!,
+}
+
+input IRecord {
+    time: Int!,
+    event: EventType
+}
+
+type Query {
+    Sheet(sheetId: ID!): SheetInfo
+    Sheets: [Sheet]
+}
+
+type Mutation {
+    Sheet(sheetName: String!, Month: Int!, Year: Int!): ID
+    Punch(sheetId: ID!): ID
+    Edit(itemId: ID!, record: IRecord): Boolean
+    Delete(itemId: ID!): Boolean
+    Login(username: String!, password: String!): String
+    CreateAccount(username: String!, password: String!): Boolean
+}

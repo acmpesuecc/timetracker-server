@@ -1,0 +1,30 @@
+{
+  "name": "timetracker-server",
+  "version": "1.0.0",
+  "description": "Timetracker application's server",
+  "main": "src/index.ts",
+  "scripts": {
+    "compile": "tsc",
+    "start": "nodemon src/index.ts",
+    "generate": "graphql-codegen -r ts-node/register"
+  },
+  "author": "Samarth Ramesh",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.2",
+    "argon2": "^0.30.3",
+    "better-sqlite3": "^8.0.1",
+    "graphql": "^16.6.0",
+    "jose": "^4.11.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.16.4",
+    "@graphql-codegen/typescript": "^2.8.7",
+    "@graphql-codegen/typescript-resolvers": "^2.7.12",
+    "@types/better-sqlite3": "^7.6.3",
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
