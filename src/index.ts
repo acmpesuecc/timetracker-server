@@ -1,3 +1,5 @@
+require('dotenv').config()
+console.log(process.env)
 import {readFileSync} from "fs";
 import {Resolvers} from "./resolvers-types";
 import {ApolloServer} from "@apollo/server";
