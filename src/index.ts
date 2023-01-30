@@ -59,7 +59,7 @@ const resolvers: Resolvers<MyContext> = {
 }
 const app = express()
 const httpServer = http.createServer(app);
-app.use(cors)
+app.use(cors())
 const server = new ApolloServer<MyContext>(
     {typeDefs, resolvers, plugins: [ApolloServerPluginDrainHttpServer({httpServer})],});
 server.start()
