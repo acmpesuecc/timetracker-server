@@ -4,6 +4,7 @@ import * as PROCESS from "process";
 
 let db: betterSqlite.Database
 const filename = PROCESS.env.DATABASE_PATH
+console.log(filename)
 try {
     db = betterSqlite(filename, {fileMustExist: true})
 } catch (e){
