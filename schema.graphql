@@ -10,8 +10,8 @@ type NRecord {
 }
 
 type SheetInfo {
-    records: [NRecord],
-    summary: Sheet,
+    records: [NRecord!]!,
+    summary: Sheet!,
     total: Int!,
     hasEnded: Boolean!
 }
