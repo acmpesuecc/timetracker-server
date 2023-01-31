@@ -34,7 +34,6 @@ export async function login(userName: string, password: string) {
                                          .setIssuedAt()
                                          .setIssuer('urn:sdevelop:authsystem')
                                          .setAudience("urn:sdevelop:contextauth")
-                                         .setExpirationTime('2h')
                                          .sign(secret)
     } else {
         throw new GraphQLError('Invalid Username / Password', {
