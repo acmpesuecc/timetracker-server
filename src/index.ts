@@ -1,5 +1,4 @@
 require('dotenv').config()
-console.log(process.env)
 import {readFileSync} from "fs";
 import {Resolvers} from "./resolvers-types";
 import {ApolloServer} from "@apollo/server";
@@ -22,7 +21,7 @@ interface MyContext {
 
 
 function authCheck(context: MyContext) {
-    if (!(context.userId > 0)) {
+    if ((context.userId < 0)) {
         console.log(context.userId)
         throw new GraphQLError('User is not authenticated', {
             extensions: {

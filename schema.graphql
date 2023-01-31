@@ -28,7 +28,7 @@ input IRecord {
 
 type Query {
     Sheet(sheetId: ID!): SheetInfo
-    Sheets: [Sheet]
+    Sheets: [Sheet!]
 }
 
 type Mutation {

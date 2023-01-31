@@ -79,7 +79,7 @@ export type NRecord = {
 export type Query = {
   __typename?: 'Query';
   Sheet?: Maybe<SheetInfo>;
-  Sheets?: Maybe<Array<Maybe<Sheet>>>;
+  Sheets?: Maybe<Array<Sheet>>;
 };
 
 
@@ -216,7 +216,7 @@ export type NRecordResolvers<ContextType = any, ParentType extends ResolversPare
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
   Sheet?: Resolver<Maybe<ResolversTypes['SheetInfo']>, ParentType, ContextType, RequireFields<QuerySheetArgs, 'sheetId'>>;
-  Sheets?: Resolver<Maybe<Array<Maybe<ResolversTypes['Sheet']>>>, ParentType, ContextType>;
+  Sheets?: Resolver<Maybe<Array<ResolversTypes['Sheet']>>, ParentType, ContextType>;
 }>;
 
 export type SheetResolvers<ContextType = any, ParentType extends ResolversParentTypes['Sheet'] = ResolversParentTypes['Sheet']> = ResolversObject<{
