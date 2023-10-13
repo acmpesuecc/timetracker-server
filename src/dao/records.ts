@@ -23,3 +23,11 @@ export function getRecordsBySheetId(sheetId: number) {
     )
     .all(sheetId) as Array<NRecord>;
 }
+
+export function Edit(sheetId,Event, Time) {
+  db
+  .prepare(
+      "UPDATE RECORDS SET (sheetId,Event,Time) VALUES (?,?,?)"
+  );
+
+}

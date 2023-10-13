@@ -11,3 +11,21 @@ export function punch(sheetId: number) {
     const punchTime = new Date().getTime()
     return createRecord(sheetId, punchTime, etype)
 }
+
+enum EditRecord {
+    Start,
+    End
+}
+
+input IRecord {
+    time: Int!,
+    event: IRecord
+}
+
+export function Edit(sheetId,Event, Time) {
+    db
+    .prepare(
+        "UPDATE RECORDS SET (sheetId,Event,Time) VALUES (?,?,?)"
+    );
+
+}

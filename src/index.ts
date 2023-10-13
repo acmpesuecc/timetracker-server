@@ -53,6 +53,9 @@ const resolvers: Resolvers<MyContext> = {
             authCheck(context)
             return punch(parseInt(args.sheetId))
                 .toString()
+        }, Edit: (parent,args,context) => {
+            return Edit(args.sheetId, args.event, arg.time)
+        }
         }
     }
 }
