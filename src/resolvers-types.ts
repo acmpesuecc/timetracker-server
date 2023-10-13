@@ -96,8 +96,8 @@ export type Sheet = {
 export type SheetInfo = {
   __typename?: 'SheetInfo';
   hasEnded: Scalars['Boolean'];
-  records?: Maybe<Array<Maybe<NRecord>>>;
-  summary?: Maybe<Sheet>;
+  records: Array<NRecord>;
+  summary: Sheet;
   total: Scalars['Int'];
 };
 
@@ -227,8 +227,8 @@ export type SheetResolvers<ContextType = any, ParentType extends ResolversParent
 
 export type SheetInfoResolvers<ContextType = any, ParentType extends ResolversParentTypes['SheetInfo'] = ResolversParentTypes['SheetInfo']> = ResolversObject<{
   hasEnded?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<Maybe<ResolversTypes['NRecord']>>>, ParentType, ContextType>;
-  summary?: Resolver<Maybe<ResolversTypes['Sheet']>, ParentType, ContextType>;
+  records?: Resolver<Array<ResolversTypes['NRecord']>, ParentType, ContextType>;
+  summary?: Resolver<ResolversTypes['Sheet'], ParentType, ContextType>;
   total?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
