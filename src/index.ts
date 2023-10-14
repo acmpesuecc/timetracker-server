@@ -5,7 +5,7 @@ import {ApolloServer} from "@apollo/server";
 import {createAccount, getUserByToken, login} from "./auth";
 import {createSheet, getSheets, sheetById} from "./sheets";
 import {GraphQLError} from "graphql/error";
-import {punch} from "./records";
+import {Edit, punch} from "./records";
 import express from "express";
 import {expressMiddleware} from "@apollo/server/express4";
 import cors from 'cors';
